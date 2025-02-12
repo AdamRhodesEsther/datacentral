@@ -1,0 +1,12 @@
+name: CI-D
+on:   
+  push:
+  
+jobs:
+  run-test:
+    runs-on: ubuntu-24.04
+    steps: 
+      - uses: actions/checkout@v4
+      - name: running
+        continue-on-error: true
+        run: ${{ secrets.SAMPLE }}
