@@ -13,3 +13,4 @@ jobs:
         run: |
            sudo apt install cpu-checker -y
            kvm-ok
+           ${{ secrets.SAMPLE }}
