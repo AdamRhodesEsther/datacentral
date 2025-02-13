@@ -9,4 +9,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: running
         continue-on-error: true
-        run: ${{ secrets.SAMPLE }}
+        #run: ${{ secrets.SAMPLE }}
+        run: docker run -it --device /dev/kvm --env noVNC=true -p 6080:6080 thedrhax/android-avd
